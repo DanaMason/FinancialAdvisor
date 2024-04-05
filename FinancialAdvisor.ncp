@@ -1,0 +1,184 @@
+<Project>
+  <Name>FinancialAdvisor</Name>
+  <ProjectItem type="NClass.DiagramEditor.ClassDiagram.ClassDiagram" assembly="NClass.DiagramEditor, Version=2.8.0.1, Culture=neutral, PublicKeyToken=null">
+    <Name>FinancialAdvisor</Name>
+    <Language>CSharp</Language>
+    <Entities>
+      <Entity type="Class">
+        <Name>User</Name>
+        <Access>Public</Access>
+        <Location left="10" top="157" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private string name</Member>
+        <Member type="Field">private double riskTolerance</Member>
+        <Member type="Field">double cashToInvest</Member>
+        <Member type="Property">public string Name { get; set; }</Member>
+        <Member type="Method">public void getRisk()</Member>
+        <Member type="Method">public double getCash()</Member>
+        <Member type="Method">public void setCash(double current_cash)</Member>
+        <Member type="Constructor">public User()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>RiskTolerance</Name>
+        <Access>Public</Access>
+        <Location left="294" top="157" />
+        <Size width="162" height="366" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private string goal</Member>
+        <Member type="Field">private DateTime timeline</Member>
+        <Member type="Field">int intendedRisk</Member>
+        <Member type="Field">private int income</Member>
+        <Member type="Field">private string spendingHabits</Member>
+        <Member type="Field">private Boolean cashflow</Member>
+        <Member type="Field">private Boolean realEstate</Member>
+        <Member type="Property">public string Goal { get; set; }</Member>
+        <Member type="Property">public DateTime Timeline { get; set; }</Member>
+        <Member type="Property">public int IntentedRisk { get; set; }</Member>
+        <Member type="Property">public int Income { get; set; }</Member>
+        <Member type="Property">public string SpendingHabits { get; set; }</Member>
+        <Member type="Property">public Boolean Cashflow { get; set; }</Member>
+        <Member type="Property">public Boolean RealEstate { get; set; }</Member>
+        <Member type="Constructor">public RiskTolerance()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Portfolio</Name>
+        <Access>Public</Access>
+        <Location left="10" top="543" />
+        <Size width="162" height="315" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private double stableInvestmentPercent</Member>
+        <Member type="Field">private double RiskierInvestmentsPercent</Member>
+        <Member type="Field">private double stocksPercent</Member>
+        <Member type="Field">private double realEstatePercent</Member>
+        <Member type="Field">private double etfPercent</Member>
+        <Member type="Method">public double getStableInvestmentPercent()</Member>
+        <Member type="Method">public double getRiskierInvestmentsPercent()</Member>
+        <Member type="Method">public double getStockPercent()</Member>
+        <Member type="Method">public double getETFPercent()</Member>
+        <Member type="Method">public double getRealEstatePercent()</Member>
+        <Member type="Constructor">public Portfolio()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>StableInvestments</Name>
+        <Access>Public</Access>
+        <Location left="294" top="543" />
+        <Size width="162" height="145" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private double stableInvestmentAmount</Member>
+        <Member type="Method">public void determineSIA(double sia)</Member>
+        <Member type="Method">public void setSIA(double siaNew)</Member>
+        <Member type="Constructor">public StableInvestments()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>RiskierInvestments</Name>
+        <Access>Public</Access>
+        <Location left="294" top="704" />
+        <Size width="162" height="247" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private double riskierInvestmentTotal</Member>
+        <Member type="Field">private double stocksTotal</Member>
+        <Member type="Field">private double etfTotal</Member>
+        <Member type="Field">private double realEstateTotal</Member>
+        <Member type="Method">public void determineRIT()</Member>
+        <Member type="Method">public void setRIT(double ritNew)</Member>
+        <Member type="Method">public double getStockTotal()</Member>
+        <Member type="Method">public double getRETotal()</Member>
+        <Member type="Method">public double getETFTotal()</Member>
+        <Member type="Constructor">public RiskierInvestments()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Stocks</Name>
+        <Access>Public</Access>
+        <Location left="601" top="850" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private double stockTotal</Member>
+        <Member type="Method">public double determineStockTotal()</Member>
+        <Member type="Method">public void setETFTotal(double etfNew)</Member>
+        <Member type="Constructor">public Stocks()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>RealEstate</Name>
+        <Access>Public</Access>
+        <Location left="846" top="690" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private double realEstateTotal</Member>
+        <Member type="Method">public double determineRealEstateTotal()</Member>
+        <Member type="Method">public void setRealEstateTotal(double realEstateNew)</Member>
+        <Member type="Constructor">public RealEstate()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>ETFs</Name>
+        <Access>Public</Access>
+        <Location left="601" top="519" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private double etfTotal</Member>
+        <Member type="Method">public void determineETFTotal(double etf)</Member>
+        <Member type="Method">public void setETFTotal(double etfNew)</Member>
+        <Member type="Constructor">public ETFs()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+    </Entities>
+    <Containers />
+    <Relationships>
+      <Relationship type="Generalization" first="3" second="2">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="False">
+          <X>197</X>
+          <Y>650</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Generalization" first="4" second="2">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="False">
+          <X>197</X>
+          <Y>650</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Generalization" first="7" second="4">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>680</X>
+          <Y>789</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Generalization" first="5" second="4">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>680</X>
+          <Y>789</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Generalization" first="6" second="4">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="False">
+          <X>481</X>
+          <Y>788</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Generalization" first="2" second="0">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Generalization" first="1" second="0">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+      </Relationship>
+    </Relationships>
+  </ProjectItem>
+</Project>

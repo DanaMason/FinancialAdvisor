@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33829.357
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinancialAdvisor", "FinancialAdvisor.csproj", "{27963B75-7A48-4BE9-A79B-DD83E5EBD9D8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinancialAdvisor", "FinancialAdvisor\FinancialAdvisor.csproj", "{ECD319F0-EACC-4485-8AAE-E45F748A8E24}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,12 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{27963B75-7A48-4BE9-A79B-DD83E5EBD9D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{27963B75-7A48-4BE9-A79B-DD83E5EBD9D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{27963B75-7A48-4BE9-A79B-DD83E5EBD9D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{27963B75-7A48-4BE9-A79B-DD83E5EBD9D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ECD319F0-EACC-4485-8AAE-E45F748A8E24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECD319F0-EACC-4485-8AAE-E45F748A8E24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECD319F0-EACC-4485-8AAE-E45F748A8E24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECD319F0-EACC-4485-8AAE-E45F748A8E24}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {93AA14E9-26F5-499A-8698-6FFBB454F4AC}
 	EndGlobalSection
 EndGlobal
