@@ -3,14 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace FinancialAdvisor
 {
 	public class User
 	{
-		private string name;
-		private double riskTolerance;
-		double cashToInvest;
+		private string _name;
+		private double _riskTolerance;
+		private double _cashToInvest;
 
 		public string Name
 		{
@@ -41,7 +42,7 @@ namespace FinancialAdvisor
 
 		public User()
 		{
-			throw new NotImplementedException();
-		}
+			MessageBox.Show("Hello!");
+        }
 	}
 }

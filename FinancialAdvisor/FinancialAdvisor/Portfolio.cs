@@ -8,11 +8,11 @@ namespace FinancialAdvisor
 {
 	public class Portfolio : User
 	{
-		private double stableInvestmentPercent;
-		private double RiskierInvestmentsPercent;
-		private double stocksPercent;
-		private double realEstatePercent;
-		private double etfPercent;
+		private double _stableInvestmentPercent;
+		private double _RiskierInvestmentsPercent;
+		private double _stocksPercent;
+		private double _realEstatePercent;
+		private double _etfPercent;
 
 		public double getStableInvestmentPercent()
 		{

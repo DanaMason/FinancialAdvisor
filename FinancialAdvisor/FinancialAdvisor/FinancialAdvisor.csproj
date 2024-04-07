@@ -42,11 +42,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="FinancialAidHome.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="FinancialAidHome.Designer.cs">
+      <DependentUpon>FinancialAidHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs" />
+    <Compile Include="RiskQuiz.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RiskQuiz.Designer.cs">
+      <DependentUpon>RiskQuiz.cs</DependentUpon>
     </Compile>
     <Compile Include="User.cs" />
     <Compile Include="RiskTolerance.cs" />
@@ -58,8 +65,11 @@
     <Compile Include="ETFs.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="FinancialAidHome.resx">
+      <DependentUpon>FinancialAidHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RiskQuiz.resx">
+      <DependentUpon>RiskQuiz.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

@@ -8,13 +8,13 @@ namespace FinancialAdvisor
 {
 	public class RiskTolerance : User
 	{
-		private string goal;
-		private DateTime timeline;
-		int intendedRisk;
-		private int income;
-		private string spendingHabits;
-		private Boolean cashflow;
-		private Boolean realEstate;
+		private string _goal;
+		private DateTime _timeline;
+		private int _intendedRisk;
+		private int _income;
+		private string _spendingHabits;
+		private Boolean _cashflow;
+		private Boolean _realEstate;
 
 		public string Goal
 		{
@@ -102,7 +102,7 @@ namespace FinancialAdvisor
 
 		public RiskTolerance()
 		{
-			throw new NotImplementedException();
+			
 		}
 	}
 }

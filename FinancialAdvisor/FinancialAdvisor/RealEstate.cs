@@ -8,7 +8,7 @@ namespace FinancialAdvisor
 {
 	public class RealEstate : RiskierInvestments
 	{
-		private double realEstateTotal;
+		private double _realEstateTotal;
 
 		public double determineRealEstateTotal()
 		{

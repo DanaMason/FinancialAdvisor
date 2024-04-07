@@ -8,10 +8,10 @@ namespace FinancialAdvisor
 {
 	public class RiskierInvestments : Portfolio
 	{
-		private double riskierInvestmentTotal;
-		private double stocksTotal;
-		private double etfTotal;
-		private double realEstateTotal;
+		private double _riskierInvestmentTotal;
+		private double _stocksTotal;
+		private double _etfTotal;
+		private double _realEstateTotal;
 
 		public void determineRIT()
 		{

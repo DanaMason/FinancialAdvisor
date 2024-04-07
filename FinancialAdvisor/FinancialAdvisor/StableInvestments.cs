@@ -8,7 +8,7 @@ namespace FinancialAdvisor
 {
 	public class StableInvestments : Portfolio
 	{
-		private double stableInvestmentAmount;
+		private double _stableInvestmentAmount;
 
 		public void determineSIA(double sia)
 		{
