@@ -16,7 +16,10 @@ namespace FinancialAid
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new UserForm());
+
+            User user = new User();
+
+            Application.Run(new UserForm(user));
         }
     }
 }
