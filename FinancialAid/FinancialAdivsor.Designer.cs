@@ -1,6 +1,6 @@
 ﻿namespace FinancialAid
 {
-    partial class FinancialAdivsor
+    partial class FinancialAdvisor
     {
         /// <summary>
         /// Required designer variable.
@@ -59,7 +59,7 @@
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Mongolian Baiti", 9F);
             this.textBox1.ForeColor = System.Drawing.Color.White;
-            this.textBox1.Location = new System.Drawing.Point(67, 266);
+            this.textBox1.Location = new System.Drawing.Point(67, 283);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
@@ -74,7 +74,7 @@
             // 
             this.button1.BackColor = System.Drawing.Color.Navy;
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(378, 266);
+            this.button1.Location = new System.Drawing.Point(378, 283);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(83, 55);
             this.button1.TabIndex = 8;
@@ -88,7 +88,7 @@
             this.QuizTB.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.QuizTB.Font = new System.Drawing.Font("Mongolian Baiti", 9F);
             this.QuizTB.ForeColor = System.Drawing.Color.White;
-            this.QuizTB.Location = new System.Drawing.Point(67, 134);
+            this.QuizTB.Location = new System.Drawing.Point(67, 153);
             this.QuizTB.Multiline = true;
             this.QuizTB.Name = "QuizTB";
             this.QuizTB.ReadOnly = true;
@@ -103,7 +103,7 @@
             // 
             this.RiskQuizButton.BackColor = System.Drawing.Color.Navy;
             this.RiskQuizButton.ForeColor = System.Drawing.Color.White;
-            this.RiskQuizButton.Location = new System.Drawing.Point(378, 134);
+            this.RiskQuizButton.Location = new System.Drawing.Point(378, 153);
             this.RiskQuizButton.Name = "RiskQuizButton";
             this.RiskQuizButton.Size = new System.Drawing.Size(83, 55);
             this.RiskQuizButton.TabIndex = 6;
@@ -117,15 +117,15 @@
             this.WelcomeBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.WelcomeBox.Font = new System.Drawing.Font("Mongolian Baiti", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.WelcomeBox.ForeColor = System.Drawing.Color.White;
-            this.WelcomeBox.Location = new System.Drawing.Point(95, 12);
+            this.WelcomeBox.Location = new System.Drawing.Point(87, 12);
             this.WelcomeBox.Multiline = true;
             this.WelcomeBox.Name = "WelcomeBox";
             this.WelcomeBox.ReadOnly = true;
             this.WelcomeBox.Size = new System.Drawing.Size(346, 85);
             this.WelcomeBox.TabIndex = 11;
-            this.WelcomeBox.Text = "Hello, and welcome to FinancialAid.io! Please follow the instructions that follow" +
-    ".";
+            this.WelcomeBox.Text = "welcome to FinancialAid.io! Please follow the instructions that follow.";
             this.WelcomeBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.WelcomeBox.TextChanged += new System.EventHandler(this.WelcomeBox_TextChanged);
             // 
             // FinancialAdivsor
             // 
@@ -141,6 +141,7 @@
             this.Controls.Add(this.RiskQuizButton);
             this.Name = "FinancialAdivsor";
             this.Text = "FinancialAdivsor";
+            this.Load += new System.EventHandler(this.FinancialAdivsor_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -79,20 +79,20 @@
             this.nameTextBox.BackColor = System.Drawing.SystemColors.WindowText;
             this.nameTextBox.ForeColor = System.Drawing.SystemColors.Window;
             this.nameTextBox.Location = new System.Drawing.Point(49, 118);
-            this.nameTextBox.Multiline = true;
             this.nameTextBox.Name = "nameTextBox";
-            this.nameTextBox.Size = new System.Drawing.Size(178, 50);
+            this.nameTextBox.Size = new System.Drawing.Size(178, 22);
             this.nameTextBox.TabIndex = 3;
+            this.nameTextBox.TextChanged += new System.EventHandler(this.nameTextBox_TextChanged);
             // 
             // cashTextBox
             // 
             this.cashTextBox.BackColor = System.Drawing.SystemColors.WindowText;
             this.cashTextBox.ForeColor = System.Drawing.SystemColors.Window;
             this.cashTextBox.Location = new System.Drawing.Point(49, 284);
-            this.cashTextBox.Multiline = true;
             this.cashTextBox.Name = "cashTextBox";
-            this.cashTextBox.Size = new System.Drawing.Size(178, 50);
+            this.cashTextBox.Size = new System.Drawing.Size(178, 22);
             this.cashTextBox.TabIndex = 4;
+            this.cashTextBox.TextChanged += new System.EventHandler(this.cashTextBox_TextChanged);
             // 
             // textBox1
             // 
@@ -128,9 +128,10 @@
             this.WelcomeBox.Location = new System.Drawing.Point(128, 15);
             this.WelcomeBox.Multiline = true;
             this.WelcomeBox.Name = "WelcomeBox";
-            this.WelcomeBox.Size = new System.Drawing.Size(248, 40);
+            this.WelcomeBox.ReadOnly = true;
+            this.WelcomeBox.Size = new System.Drawing.Size(248, 56);
             this.WelcomeBox.TabIndex = 7;
-            this.WelcomeBox.Text = "Hello, please follow the following instructions to startt:";
+            this.WelcomeBox.Text = "Hello, please follow the following instructions to start:";
             this.WelcomeBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // UserForm

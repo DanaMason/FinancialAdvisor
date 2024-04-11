@@ -1,16 +1,27 @@
-﻿using System;
+﻿using FinancialAdvisor;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static FinancialAdvisor.RiskTolerance;
 
 namespace FinancialAid
 {
     public class User
     {
         private string _name;
-        private double _riskTolerance;
+        private RiskTolerance.RiskToleranceData _riskTolerance = new RiskTolerance.RiskToleranceData
+        {
+            Goal = null,
+            Timeline = null,
+            IntendedRisk = null,
+            Income = null,
+            SpendingHabits = null,
+            Cashflow = null,
+            RealEstate = null
+        };
         private double _cashToInvest;
 
         public string Name
@@ -25,10 +36,10 @@ namespace FinancialAid
             }
         }
 
-        public double getRisk()
+        /*public string getRisk()
         {
-            return _riskTolerance;
-        }
+            MessageBox.Show($"Goal: {_riskTolerance.Goal}\nTimeline: {_riskTolerance.Timeline}\nIntended Risk: {_riskTolerance.IntendedRisk}\nIncome: {_riskTolerance.Income}\nSpending Habits: {_riskTolerance.SpendingHabits}\nCashflow: {_riskTolerance.Cashflow}\nReal Estate: {_riskTolerance.RealEstate}", "Risk Tolerance Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }*/
 
         public double getCash()
         {

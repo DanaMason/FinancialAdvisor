@@ -22,7 +22,7 @@ namespace FinancialAid
         private void continueButton_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FinancialAdivsor advisorForm = new FinancialAdivsor();
+            FinancialAdvisor advisorForm = new FinancialAdvisor(user);
             advisorForm.ShowDialog();
             this.Close();
         }
@@ -42,6 +42,16 @@ namespace FinancialAid
             {
                 MessageBox.Show("Please enter a valid CASH amount.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void nameTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cashTextBox_TextChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }
