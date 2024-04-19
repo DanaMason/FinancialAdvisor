@@ -25,16 +25,6 @@ namespace FinancialAid
             this.financialAdvisor = advisor;
         }
 
-        /*
-        private string _goal;
-        private DateTime _timeline;
-        private int _intendedRisk;
-        private int _income;
-        private string _spendingHabits;
-        private Boolean _cashflow;
-        private Boolean _realEstate;
-        */
-
         private void RiskQuizForm_Load(object sender, EventArgs e)
         {
 

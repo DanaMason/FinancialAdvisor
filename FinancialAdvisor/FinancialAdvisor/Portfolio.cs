@@ -16,28 +16,32 @@ namespace FinancialAdvisor
 
 		public double getStableInvestmentPercent()
 		{
-			throw new NotImplementedException();
-		}
+			return _stableInvestmentPercent;
+
+        }
 
 		public double getRiskierInvestmentsPercent()
 		{
-			throw new NotImplementedException();
-		}
+			return _RiskierInvestmentsPercent;
+
+        }
 
 		public double getStockPercent()
 		{
-			throw new NotImplementedException();
-		}
+			return _stocksPercent;
+
+        }
 
 		public double getETFPercent()
 		{
-			throw new NotImplementedException();
-		}
+			return _realEstatePercent;
+
+        }
 
 		public double getRealEstatePercent()
 		{
-			throw new NotImplementedException();
-		}
+			return _etfPercent;
+        }
 
 		public Portfolio()
 		{

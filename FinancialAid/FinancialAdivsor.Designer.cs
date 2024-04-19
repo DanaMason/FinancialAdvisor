@@ -127,7 +127,7 @@
             this.WelcomeBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.WelcomeBox.TextChanged += new System.EventHandler(this.WelcomeBox_TextChanged);
             // 
-            // FinancialAdivsor
+            // FinancialAdvisor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -139,7 +139,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.QuizTB);
             this.Controls.Add(this.RiskQuizButton);
-            this.Name = "FinancialAdivsor";
+            this.Name = "FinancialAdvisor";
             this.Text = "FinancialAdivsor";
             this.Load += new System.EventHandler(this.FinancialAdivsor_Load);
             this.ResumeLayout(false);

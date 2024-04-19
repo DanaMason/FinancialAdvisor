@@ -31,6 +31,13 @@ namespace FinancialAid
             riskQuizForm.Show();
         }
 
+        private void button1_Click(object sender, EventArgs e) // Calc button
+        {
+            double cashToInvest = user.getCash(); 
+            PortfolioForm portfolioForm = new PortfolioForm(cashToInvest);
+            portfolioForm.Show();
+        }
+
         private void QuizTB_TextChanged(object sender, EventArgs e)
         {
 
@@ -39,11 +46,6 @@ namespace FinancialAid
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
-        }
-
-        private void button1_Click(object sender, EventArgs e) // Calc button
-        {
-            
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
