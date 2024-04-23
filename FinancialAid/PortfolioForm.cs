@@ -13,33 +13,42 @@ namespace FinancialAid
 {
     public partial class PortfolioForm : Form
     {
-        private Portfolio portfolio;  
+        private Portfolio portfolio;
+        private StableInvestments stableInvestments;
+        private RiskyInvestments riskyInvestments;
+        private subRiskyInvestments subRiskyInvestments;
         private double cashToInvest;
-        public PortfolioForm(double cashToInvest)
+        private RiskTolerance.RiskToleranceData riskData;
+        private Database database;
+
+
+        public PortfolioForm(double cashToInvest, RiskTolerance.RiskToleranceData riskData)
         {
             InitializeComponent();
 
             this.cashToInvest = cashToInvest;
+            this.riskData = riskData;
+            this.database = new Database(riskData.RealEstate);
 
-            portfolio = new Portfolio();
-
-            StablePercent.Text = portfolio.getStableInvestmentPercent().ToString("F2") + "%";
-            RiskyPercent.Text = portfolio.getRiskierInvestmentsPercent().ToString("F2") + "%";
-            StockPercent.Text = portfolio.getStockPercent().ToString("F2") + "%";
-            REPercent.Text = portfolio.getRealEstatePercent().ToString("F2") + "%";
-            ETFPercent.Text = portfolio.getETFPercent().ToString("F2") + "%";
-            TotalPercent.Text = ("100.00%");
-
-            MoneyStable.Text = "$ " + (cashToInvest * (portfolio.getStableInvestmentPercent() / 100)).ToString("F2");
-            MoneyRisky.Text = "$ " + (cashToInvest * (portfolio.getRiskierInvestmentsPercent() / 100)).ToString("F2");
-            MoneyStocks.Text = "$ " + (cashToInvest * (portfolio.getStockPercent() / 100)).ToString("F2");
-            MoneyRE.Text = "$ " + (cashToInvest * (portfolio.getRealEstatePercent() / 100)).ToString("F2");
-            MoneyEtf.Text = "$ " + (cashToInvest * (portfolio.getETFPercent() / 100)).ToString("F2");
-            totalCash.Text = "$ " + (cashToInvest).ToString("F2");
+            stableInvestments = new StableInvestments(riskData, database);
+            riskyInvestments = new RiskyInvestments(riskData, database);
+            subRiskyInvestments = new subRiskyInvestments(riskData, database);
         }
         private void PortfolioForm_Load(object sender, EventArgs e)
         {
-               
+            StablePercent.Text = stableInvestments.getStableInvestmentPercent().ToString("F2") + "%";
+            RiskyPercent.Text = riskyInvestments.getRiskierInvestmentsPercent().ToString("F2") + "%";
+            StockPercent.Text = subRiskyInvestments.getStockPercent().ToString("F2") + "%";
+            REPercent.Text = subRiskyInvestments.getRealEstatePercent().ToString("F2") + "%";
+            ETFPercent.Text = subRiskyInvestments.getETFPercent().ToString("F2") + "%";
+            TotalPercent.Text = "100.00%";
+
+            MoneyStable.Text = "$ " + (cashToInvest * (stableInvestments.getStableInvestmentPercent() / 100)).ToString("F2");
+            MoneyRisky.Text = "$ " + (cashToInvest * (riskyInvestments.getRiskierInvestmentsPercent() / 100)).ToString("F2");
+            MoneyStocks.Text = "$ " + (cashToInvest * (subRiskyInvestments.getStockPercent() / 100)).ToString("F2");
+            MoneyRE.Text = "$ " + (cashToInvest * (subRiskyInvestments.getRealEstatePercent() / 100)).ToString("F2");
+            MoneyEtf.Text = "$ " + (cashToInvest * (subRiskyInvestments.getETFPercent() / 100)).ToString("F2");
+            totalCash.Text = "$ " + cashToInvest.ToString("F2");
         }
 
         private void textBox22_TextChanged(object sender, EventArgs e)
@@ -118,6 +127,11 @@ namespace FinancialAid
         }
 
         private void textBox7_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
         {
 
         }

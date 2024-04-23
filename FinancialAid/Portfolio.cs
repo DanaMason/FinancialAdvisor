@@ -1,52 +1,45 @@
-﻿using FinancialAid;
+﻿using FinancialAdvisor;
+using FinancialAid;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace FinancialAid
 {
     public class Portfolio : User
     {
-        private double _stableInvestmentPercent;
-        private double _riskierInvestmentsPercent;
-        private double _stocksPercent;
-        private double _realEstatePercent;
-        private double _etfPercent;
 
-        public double getStableInvestmentPercent()
+        public virtual double getStableInvestmentPercent()
         {
-            return _stableInvestmentPercent;
+            return 50.0;
         }
 
-        public double getRiskierInvestmentsPercent()
+        public virtual double getRiskierInvestmentsPercent()
         {
-            return _riskierInvestmentsPercent;
+            return 50.0;
         }
 
-        public double getStockPercent()
+        public virtual double getStockPercent()
         {
-            return _stocksPercent;
+            return 25.0;
         }
 
-        public double getETFPercent()
+        public virtual double getETFPercent()
         {
-            return _realEstatePercent;
+            return 25.0;
         }
 
-        public double getRealEstatePercent()
+        public virtual double getRealEstatePercent()
         {
-            return _etfPercent;
+            return 0.0;
         }
 
         public Portfolio()
         {
-            _stableInvestmentPercent = 79.468;
-            _riskierInvestmentsPercent = 20.532;
-            _stocksPercent = 1.0;
-            _realEstatePercent = 1.0;
-            _etfPercent = 18.532;
+             
         }
     }
 }

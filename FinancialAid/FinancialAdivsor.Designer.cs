@@ -34,6 +34,9 @@
             this.QuizTB = new System.Windows.Forms.TextBox();
             this.RiskQuizButton = new System.Windows.Forms.Button();
             this.WelcomeBox = new System.Windows.Forms.TextBox();
+            this.Restart = new System.Windows.Forms.Button();
+            this.Exit = new System.Windows.Forms.Button();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // textBox2
@@ -48,6 +51,7 @@
             this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(473, 36);
             this.textBox2.TabIndex = 10;
+            this.textBox2.TabStop = false;
             this.textBox2.Text = "Thank you for using our services and hopefully this financial advise can help you" +
     " in your future financial decisions. Happy investing!";
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -65,6 +69,7 @@
             this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(224, 72);
             this.textBox1.TabIndex = 9;
+            this.textBox1.TabStop = false;
             this.textBox1.Text = "After you have taken the previous quiz, please press the following button to dete" +
     "rmine your suggested Portfolio.";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -74,9 +79,9 @@
             // 
             this.button1.BackColor = System.Drawing.Color.Navy;
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(378, 283);
+            this.button1.Location = new System.Drawing.Point(346, 283);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(83, 55);
+            this.button1.Size = new System.Drawing.Size(132, 55);
             this.button1.TabIndex = 8;
             this.button1.Text = "Calculate Portfolio";
             this.button1.UseVisualStyleBackColor = false;
@@ -94,6 +99,7 @@
             this.QuizTB.ReadOnly = true;
             this.QuizTB.Size = new System.Drawing.Size(224, 73);
             this.QuizTB.TabIndex = 7;
+            this.QuizTB.TabStop = false;
             this.QuizTB.Text = "Please click the button to the right to take our personally designed quiz to dete" +
     "rmine your risk personality.";
             this.QuizTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -103,9 +109,9 @@
             // 
             this.RiskQuizButton.BackColor = System.Drawing.Color.Navy;
             this.RiskQuizButton.ForeColor = System.Drawing.Color.White;
-            this.RiskQuizButton.Location = new System.Drawing.Point(378, 153);
+            this.RiskQuizButton.Location = new System.Drawing.Point(346, 153);
             this.RiskQuizButton.Name = "RiskQuizButton";
-            this.RiskQuizButton.Size = new System.Drawing.Size(83, 55);
+            this.RiskQuizButton.Size = new System.Drawing.Size(132, 55);
             this.RiskQuizButton.TabIndex = 6;
             this.RiskQuizButton.Text = "Risk Quiz";
             this.RiskQuizButton.UseVisualStyleBackColor = false;
@@ -121,11 +127,53 @@
             this.WelcomeBox.Multiline = true;
             this.WelcomeBox.Name = "WelcomeBox";
             this.WelcomeBox.ReadOnly = true;
-            this.WelcomeBox.Size = new System.Drawing.Size(346, 85);
+            this.WelcomeBox.Size = new System.Drawing.Size(346, 135);
             this.WelcomeBox.TabIndex = 11;
+            this.WelcomeBox.TabStop = false;
             this.WelcomeBox.Text = "welcome to FinancialAid.io! Please follow the instructions that follow.";
             this.WelcomeBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.WelcomeBox.TextChanged += new System.EventHandler(this.WelcomeBox_TextChanged);
+            // 
+            // Restart
+            // 
+            this.Restart.BackColor = System.Drawing.Color.Navy;
+            this.Restart.ForeColor = System.Drawing.Color.White;
+            this.Restart.Location = new System.Drawing.Point(31, 382);
+            this.Restart.Name = "Restart";
+            this.Restart.Size = new System.Drawing.Size(220, 38);
+            this.Restart.TabIndex = 12;
+            this.Restart.Text = "Restart";
+            this.Restart.UseVisualStyleBackColor = false;
+            this.Restart.Click += new System.EventHandler(this.Restart_Click);
+            // 
+            // Exit
+            // 
+            this.Exit.BackColor = System.Drawing.Color.Navy;
+            this.Exit.ForeColor = System.Drawing.Color.White;
+            this.Exit.Location = new System.Drawing.Point(284, 382);
+            this.Exit.Name = "Exit";
+            this.Exit.Size = new System.Drawing.Size(220, 38);
+            this.Exit.TabIndex = 13;
+            this.Exit.Text = "Exit";
+            this.Exit.UseVisualStyleBackColor = false;
+            this.Exit.Click += new System.EventHandler(this.Exit_Click);
+            // 
+            // textBox3
+            // 
+            this.textBox3.BackColor = System.Drawing.SystemColors.MenuText;
+            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox3.Font = new System.Drawing.Font("Mongolian Baiti", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.ForeColor = System.Drawing.Color.White;
+            this.textBox3.Location = new System.Drawing.Point(87, 12);
+            this.textBox3.Multiline = true;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.ReadOnly = true;
+            this.textBox3.Size = new System.Drawing.Size(346, 135);
+            this.textBox3.TabIndex = 11;
+            this.textBox3.TabStop = false;
+            this.textBox3.Text = "welcome to FinancialAid.io! Please follow the instructions that follow.";
+            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox3.TextChanged += new System.EventHandler(this.WelcomeBox_TextChanged);
             // 
             // FinancialAdvisor
             // 
@@ -133,6 +181,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.WindowText;
             this.ClientSize = new System.Drawing.Size(523, 502);
+            this.Controls.Add(this.Exit);
+            this.Controls.Add(this.Restart);
+            this.Controls.Add(this.textBox3);
             this.Controls.Add(this.WelcomeBox);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
@@ -155,5 +206,8 @@
         private System.Windows.Forms.TextBox QuizTB;
         private System.Windows.Forms.Button RiskQuizButton;
         private System.Windows.Forms.TextBox WelcomeBox;
+        private System.Windows.Forms.Button Restart;
+        private System.Windows.Forms.Button Exit;
+        private System.Windows.Forms.TextBox textBox3;
     }
 }

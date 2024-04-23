@@ -12,16 +12,6 @@ namespace FinancialAid
     public class User
     {
         private string _name;
-        private RiskTolerance.RiskToleranceData _riskTolerance = new RiskTolerance.RiskToleranceData
-        {
-            Goal = null,
-            Timeline = null,
-            IntendedRisk = null,
-            Income = null,
-            SpendingHabits = null,
-            Cashflow = null,
-            RealEstate = null
-        };
         private double _cashToInvest;
 
         public string Name

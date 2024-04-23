@@ -70,6 +70,7 @@
             this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(738, 72);
             this.textBox1.TabIndex = 0;
+            this.textBox1.TabStop = false;
             this.textBox1.Text = "Hello! Here you can view what concentration you should hold your portfolio at for" +
     " each sector. Information about each sector will also be given.";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -84,6 +85,7 @@
             this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(158, 22);
             this.textBox2.TabIndex = 1;
+            this.textBox2.TabStop = false;
             this.textBox2.Text = "Investment Type";
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -97,6 +99,7 @@
             this.textBox3.ReadOnly = true;
             this.textBox3.Size = new System.Drawing.Size(74, 25);
             this.textBox3.TabIndex = 2;
+            this.textBox3.TabStop = false;
             this.textBox3.Text = "Percent";
             this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -110,6 +113,7 @@
             this.textBox4.ReadOnly = true;
             this.textBox4.Size = new System.Drawing.Size(155, 44);
             this.textBox4.TabIndex = 3;
+            this.textBox4.TabStop = false;
             this.textBox4.Text = "Cash equivalent (based on your portfolio total).";
             this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -123,8 +127,10 @@
             this.textBox5.ReadOnly = true;
             this.textBox5.Size = new System.Drawing.Size(308, 25);
             this.textBox5.TabIndex = 4;
+            this.textBox5.TabStop = false;
             this.textBox5.Text = "Descriptions of Sectors";
             this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
             // textBox9
             // 
@@ -135,6 +141,7 @@
             this.textBox9.ReadOnly = true;
             this.textBox9.Size = new System.Drawing.Size(157, 22);
             this.textBox9.TabIndex = 8;
+            this.textBox9.TabStop = false;
             this.textBox9.Text = "Stable Investments";
             this.textBox9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -160,6 +167,7 @@
             this.textBox12.ReadOnly = true;
             this.textBox12.Size = new System.Drawing.Size(157, 22);
             this.textBox12.TabIndex = 15;
+            this.textBox12.TabStop = false;
             this.textBox12.Text = "Stocks";
             this.textBox12.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -172,6 +180,7 @@
             this.textBox13.ReadOnly = true;
             this.textBox13.Size = new System.Drawing.Size(157, 22);
             this.textBox13.TabIndex = 14;
+            this.textBox13.TabStop = false;
             this.textBox13.Text = "ETFs";
             this.textBox13.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox13.TextChanged += new System.EventHandler(this.textBox13_TextChanged);
@@ -185,6 +194,7 @@
             this.textBox15.ReadOnly = true;
             this.textBox15.Size = new System.Drawing.Size(157, 22);
             this.textBox15.TabIndex = 12;
+            this.textBox15.TabStop = false;
             this.textBox15.Text = "Real Estate";
             this.textBox15.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -294,6 +304,7 @@
             this.textBox21.ReadOnly = true;
             this.textBox21.Size = new System.Drawing.Size(317, 59);
             this.textBox21.TabIndex = 30;
+            this.textBox21.TabStop = false;
             this.textBox21.Text = "Includes single company stocks like AAPL, MCD, AMZN, etc. Can be small, medium, o" +
     "r large cap. Should be kept domestic.";
             this.textBox21.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -308,8 +319,9 @@
             this.textBox22.ReadOnly = true;
             this.textBox22.Size = new System.Drawing.Size(317, 37);
             this.textBox22.TabIndex = 29;
+            this.textBox22.TabStop = false;
             this.textBox22.Text = "Includes indices like the S&P 500, DOW JONES, and NASDAQ. Sectors are also includ" +
-    "ed";
+    "ed.";
             this.textBox22.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox22.TextChanged += new System.EventHandler(this.textBox22_TextChanged);
             // 
@@ -321,8 +333,9 @@
             this.textBox23.Multiline = true;
             this.textBox23.Name = "textBox23";
             this.textBox23.ReadOnly = true;
-            this.textBox23.Size = new System.Drawing.Size(317, 43);
+            this.textBox23.Size = new System.Drawing.Size(317, 59);
             this.textBox23.TabIndex = 28;
+            this.textBox23.TabStop = false;
             this.textBox23.Text = "Includes residential, commercial, industrial, etc. real estate, as well as REITs " +
     "and similar investments.";
             this.textBox23.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -337,6 +350,7 @@
             this.textBox25.ReadOnly = true;
             this.textBox25.Size = new System.Drawing.Size(317, 59);
             this.textBox25.TabIndex = 26;
+            this.textBox25.TabStop = false;
             this.textBox25.Text = "More secured investments like US Treasury Bonds, CDs, Retirement Plans, Certain a" +
     "nnuities and other similar investments.";
             this.textBox25.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -350,7 +364,8 @@
             this.textBox10.ReadOnly = true;
             this.textBox10.Size = new System.Drawing.Size(317, 22);
             this.textBox10.TabIndex = 38;
-            this.textBox10.Text = "ETFs + Stocks + Real Estate";
+            this.textBox10.TabStop = false;
+            this.textBox10.Text = "ETFs, Stocks & Real Estate.";
             this.textBox10.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // MoneyRisky
@@ -386,6 +401,7 @@
             this.textBox24.ReadOnly = true;
             this.textBox24.Size = new System.Drawing.Size(157, 22);
             this.textBox24.TabIndex = 35;
+            this.textBox24.TabStop = false;
             this.textBox24.Text = "Risky Investment Total";
             this.textBox24.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -422,7 +438,8 @@
             this.Totaltxt.ReadOnly = true;
             this.Totaltxt.Size = new System.Drawing.Size(157, 22);
             this.Totaltxt.TabIndex = 40;
-            this.Totaltxt.Text = "Real Estate";
+            this.Totaltxt.TabStop = false;
+            this.Totaltxt.Text = "Total";
             this.Totaltxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Totaltxt.TextChanged += new System.EventHandler(this.textBox11_TextChanged);
             // 

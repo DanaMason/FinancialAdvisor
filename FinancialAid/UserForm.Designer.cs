@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.continueButton = new System.Windows.Forms.Button();
-            this.nameButton = new System.Windows.Forms.Button();
-            this.cashButton = new System.Windows.Forms.Button();
             this.nameTextBox = new System.Windows.Forms.TextBox();
             this.cashTextBox = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.WelcomeBox = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.cashButton = new System.Windows.Forms.Button();
+            this.nameButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // continueButton
@@ -50,35 +50,11 @@
             this.continueButton.UseVisualStyleBackColor = false;
             this.continueButton.Click += new System.EventHandler(this.continueButton_Click);
             // 
-            // nameButton
-            // 
-            this.nameButton.BackColor = System.Drawing.Color.Navy;
-            this.nameButton.ForeColor = System.Drawing.SystemColors.Window;
-            this.nameButton.Location = new System.Drawing.Point(289, 118);
-            this.nameButton.Name = "nameButton";
-            this.nameButton.Size = new System.Drawing.Size(130, 50);
-            this.nameButton.TabIndex = 1;
-            this.nameButton.Text = "Save";
-            this.nameButton.UseVisualStyleBackColor = false;
-            this.nameButton.Click += new System.EventHandler(this.nameButton_Click);
-            // 
-            // cashButton
-            // 
-            this.cashButton.BackColor = System.Drawing.Color.Navy;
-            this.cashButton.ForeColor = System.Drawing.SystemColors.Window;
-            this.cashButton.Location = new System.Drawing.Point(289, 284);
-            this.cashButton.Name = "cashButton";
-            this.cashButton.Size = new System.Drawing.Size(130, 50);
-            this.cashButton.TabIndex = 2;
-            this.cashButton.Text = "Save";
-            this.cashButton.UseVisualStyleBackColor = false;
-            this.cashButton.Click += new System.EventHandler(this.cashButton_Click);
-            // 
             // nameTextBox
             // 
             this.nameTextBox.BackColor = System.Drawing.SystemColors.WindowText;
             this.nameTextBox.ForeColor = System.Drawing.SystemColors.Window;
-            this.nameTextBox.Location = new System.Drawing.Point(49, 118);
+            this.nameTextBox.Location = new System.Drawing.Point(49, 144);
             this.nameTextBox.Name = "nameTextBox";
             this.nameTextBox.Size = new System.Drawing.Size(178, 22);
             this.nameTextBox.TabIndex = 3;
@@ -94,18 +70,6 @@
             this.cashTextBox.TabIndex = 4;
             this.cashTextBox.TextChanged += new System.EventHandler(this.cashTextBox_TextChanged);
             // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.WindowText;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.ForeColor = System.Drawing.SystemColors.Window;
-            this.textBox1.Location = new System.Drawing.Point(49, 77);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(178, 15);
-            this.textBox1.TabIndex = 5;
-            this.textBox1.Text = "Please input your name:";
-            // 
             // textBox2
             // 
             this.textBox2.BackColor = System.Drawing.SystemColors.WindowText;
@@ -117,6 +81,7 @@
             this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(178, 40);
             this.textBox2.TabIndex = 6;
+            this.textBox2.TabStop = false;
             this.textBox2.Text = "Please input the amount of money you want to invest:";
             // 
             // WelcomeBox
@@ -125,14 +90,53 @@
             this.WelcomeBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.WelcomeBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.WelcomeBox.ForeColor = System.Drawing.SystemColors.Window;
-            this.WelcomeBox.Location = new System.Drawing.Point(128, 15);
+            this.WelcomeBox.Location = new System.Drawing.Point(49, 15);
             this.WelcomeBox.Multiline = true;
             this.WelcomeBox.Name = "WelcomeBox";
             this.WelcomeBox.ReadOnly = true;
-            this.WelcomeBox.Size = new System.Drawing.Size(248, 56);
+            this.WelcomeBox.Size = new System.Drawing.Size(370, 82);
             this.WelcomeBox.TabIndex = 7;
+            this.WelcomeBox.TabStop = false;
             this.WelcomeBox.Text = "Hello, please follow the following instructions to start:";
             this.WelcomeBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.WelcomeBox.TextChanged += new System.EventHandler(this.WelcomeBox_TextChanged);
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.SystemColors.WindowText;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.ForeColor = System.Drawing.SystemColors.Window;
+            this.textBox1.Location = new System.Drawing.Point(49, 103);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(178, 15);
+            this.textBox1.TabIndex = 5;
+            this.textBox1.TabStop = false;
+            this.textBox1.Text = "Please input your name:";
+            // 
+            // cashButton
+            // 
+            this.cashButton.BackColor = System.Drawing.Color.Navy;
+            this.cashButton.ForeColor = System.Drawing.SystemColors.Window;
+            this.cashButton.Location = new System.Drawing.Point(289, 284);
+            this.cashButton.Name = "cashButton";
+            this.cashButton.Size = new System.Drawing.Size(130, 50);
+            this.cashButton.TabIndex = 2;
+            this.cashButton.Text = "Save";
+            this.cashButton.UseVisualStyleBackColor = false;
+            this.cashButton.Click += new System.EventHandler(this.cashButton_Click);
+            // 
+            // nameButton
+            // 
+            this.nameButton.BackColor = System.Drawing.Color.Navy;
+            this.nameButton.ForeColor = System.Drawing.SystemColors.Window;
+            this.nameButton.Location = new System.Drawing.Point(289, 144);
+            this.nameButton.Name = "nameButton";
+            this.nameButton.Size = new System.Drawing.Size(130, 50);
+            this.nameButton.TabIndex = 1;
+            this.nameButton.Text = "Save";
+            this.nameButton.UseVisualStyleBackColor = false;
+            this.nameButton.Click += new System.EventHandler(this.nameButton_Click);
             // 
             // UserForm
             // 
@@ -161,12 +165,12 @@
         #endregion
 
         private System.Windows.Forms.Button continueButton;
-        private System.Windows.Forms.Button nameButton;
-        private System.Windows.Forms.Button cashButton;
         private System.Windows.Forms.TextBox nameTextBox;
         private System.Windows.Forms.TextBox cashTextBox;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox WelcomeBox;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button cashButton;
+        private System.Windows.Forms.Button nameButton;
     }
 }

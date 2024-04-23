@@ -37,24 +37,70 @@ namespace FinancialAid
 
         private void SaveContinueBtn_Click(object sender, EventArgs e)
         {
-            RiskTolerance.RiskToleranceData info = new RiskTolerance.RiskToleranceData
+            int truth = 0;
+
+            if (GoalsDB.Text == "- Select -" || TimelineDB.Text == "- Select -" || RiskDB.Text == "- Select -" || IncomeDB.Text == "- Select -" || SpendingHabitsDB.Text == "- Select -" || CashflowDB.Text == "- Select -" || RealEstateDB.Text == "- Select -")
             {
-                Goal = GoalsDB.Text,
-                Timeline = TimelineDB.Text,
-                IntendedRisk = RiskDB.Text,
-                Income = IncomeDB.Text,
-                SpendingHabits = SpendingHabitsDB.Text,
-                Cashflow = CashflowDB.Text,
-                RealEstate = RealEstateDB.Text
-            };
+                MessageBox.Show("Please select an answer for all questions.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                truth = 1;
+            }
 
-            this.Close();
+            if (truth == 0)
+            {
+                RiskTolerance.RiskToleranceData info = new RiskTolerance.RiskToleranceData
+                {
+                    Goal = GoalsDB.Text,
+                    Timeline = TimelineDB.Text,
+                    IntendedRisk = RiskDB.Text,
+                    Income = IncomeDB.Text,
+                    SpendingHabits = SpendingHabitsDB.Text,
+                    Cashflow = CashflowDB.Text,
+                    RealEstate = RealEstateDB.Text
+                };
 
-            financialAdvisor.recieveandanalyzeRisk(info);
+                this.Close();
+
+                financialAdvisor.recieveandanalyzeRisk(info);
+            }
         
         }
 
         private void GoalsDB_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RealEstateDB_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TitleRisktxt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CashflowDB_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SpendingHabitsDB_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void IncomeDB_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RiskDB_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TimelineDB_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

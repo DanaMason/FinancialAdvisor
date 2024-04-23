@@ -18,6 +18,19 @@ namespace FinancialAid
     {
         private User user;
         RiskTolerance riskTolerance = new RiskTolerance();
+        private bool riskQuizTaken = false;
+
+        private RiskTolerance.RiskToleranceData _riskTolerance = new RiskTolerance.RiskToleranceData
+        {
+            Goal = null,
+            Timeline = null,
+            IntendedRisk = null,
+            Income = null,
+            SpendingHabits = null,
+            Cashflow = null,
+            RealEstate = null
+        };
+
         public FinancialAdvisor(User user)
         {
             InitializeComponent();
@@ -31,10 +44,16 @@ namespace FinancialAid
             riskQuizForm.Show();
         }
 
-        private void button1_Click(object sender, EventArgs e) // Calc button
+        private void button1_Click(object sender, EventArgs e)
         {
+            if (riskQuizTaken == false)
+            {
+                MessageBox.Show("Must take the Risk Quiz.", "No Risk Quiz Taken!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             double cashToInvest = user.getCash(); 
-            PortfolioForm portfolioForm = new PortfolioForm(cashToInvest);
+            PortfolioForm portfolioForm = new PortfolioForm(cashToInvest, _riskTolerance);
             portfolioForm.Show();
         }
 
@@ -64,8 +83,30 @@ namespace FinancialAid
         }
         public void recieveandanalyzeRisk(RiskTolerance.RiskToleranceData info)
         {
-            //= info;
-            MessageBox.Show($"Goal: {info.Goal}\nTimeline: {info.Timeline}\nIntended Risk: {info.IntendedRisk}\nIncome: {info.Income}\nSpending Habits: {info.SpendingHabits}\nCashflow: {info.Cashflow}\nReal Estate: {info.RealEstate}", "Risk Tolerance Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            _riskTolerance.Goal = info.Goal;
+            _riskTolerance.Timeline = info.Timeline;
+            _riskTolerance.IntendedRisk = info.IntendedRisk;
+            _riskTolerance.Income = info.Income;
+            _riskTolerance.SpendingHabits = info.SpendingHabits;
+            _riskTolerance.Cashflow = info.Cashflow;
+            _riskTolerance.RealEstate = info.RealEstate;
+
+            riskQuizTaken = true;
+        }
+
+        private void Restart_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            User user = new User(); 
+            UserForm userForm = new UserForm(user); 
+
+            userForm.ShowDialog();
+        }
+
+        private void Exit_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

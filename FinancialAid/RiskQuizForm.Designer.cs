@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.TitleRisktxt = new System.Windows.Forms.TextBox();
             this.WelcomeInfoRisktxt = new System.Windows.Forms.TextBox();
             this.Timelinetxt = new System.Windows.Forms.TextBox();
             this.SHtxt = new System.Windows.Forms.TextBox();
@@ -45,32 +44,21 @@
             this.IncomeDB = new System.Windows.Forms.ComboBox();
             this.SpendingHabitsDB = new System.Windows.Forms.ComboBox();
             this.SaveContinueBtn = new System.Windows.Forms.Button();
+            this.TitleRisktxt = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
-            // 
-            // TitleRisktxt
-            // 
-            this.TitleRisktxt.BackColor = System.Drawing.SystemColors.WindowText;
-            this.TitleRisktxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TitleRisktxt.ForeColor = System.Drawing.SystemColors.Window;
-            this.TitleRisktxt.Location = new System.Drawing.Point(117, 12);
-            this.TitleRisktxt.Name = "TitleRisktxt";
-            this.TitleRisktxt.ReadOnly = true;
-            this.TitleRisktxt.Size = new System.Drawing.Size(267, 30);
-            this.TitleRisktxt.TabIndex = 0;
-            this.TitleRisktxt.Text = "Risk Assessment";
-            this.TitleRisktxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // WelcomeInfoRisktxt
             // 
             this.WelcomeInfoRisktxt.BackColor = System.Drawing.SystemColors.WindowText;
             this.WelcomeInfoRisktxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.WelcomeInfoRisktxt.ForeColor = System.Drawing.SystemColors.Window;
-            this.WelcomeInfoRisktxt.Location = new System.Drawing.Point(117, 39);
+            this.WelcomeInfoRisktxt.Location = new System.Drawing.Point(47, 57);
             this.WelcomeInfoRisktxt.Multiline = true;
             this.WelcomeInfoRisktxt.Name = "WelcomeInfoRisktxt";
             this.WelcomeInfoRisktxt.ReadOnly = true;
-            this.WelcomeInfoRisktxt.Size = new System.Drawing.Size(267, 61);
+            this.WelcomeInfoRisktxt.Size = new System.Drawing.Size(494, 50);
             this.WelcomeInfoRisktxt.TabIndex = 1;
+            this.WelcomeInfoRisktxt.TabStop = false;
             this.WelcomeInfoRisktxt.Text = "Please enter the following information for an educated recommendation for your in" +
     "vestment style:";
             this.WelcomeInfoRisktxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -83,8 +71,9 @@
             this.Timelinetxt.Location = new System.Drawing.Point(47, 192);
             this.Timelinetxt.Name = "Timelinetxt";
             this.Timelinetxt.ReadOnly = true;
-            this.Timelinetxt.Size = new System.Drawing.Size(301, 22);
+            this.Timelinetxt.Size = new System.Drawing.Size(312, 22);
             this.Timelinetxt.TabIndex = 3;
+            this.Timelinetxt.TabStop = false;
             this.Timelinetxt.Text = "What is your investment timeline?";
             // 
             // SHtxt
@@ -94,8 +83,9 @@
             this.SHtxt.Location = new System.Drawing.Point(47, 360);
             this.SHtxt.Name = "SHtxt";
             this.SHtxt.ReadOnly = true;
-            this.SHtxt.Size = new System.Drawing.Size(301, 22);
+            this.SHtxt.Size = new System.Drawing.Size(312, 22);
             this.SHtxt.TabIndex = 4;
+            this.SHtxt.TabStop = false;
             this.SHtxt.Text = "How would you desscribe your spending habits?";
             // 
             // Risktxt
@@ -105,8 +95,9 @@
             this.Risktxt.Location = new System.Drawing.Point(47, 248);
             this.Risktxt.Name = "Risktxt";
             this.Risktxt.ReadOnly = true;
-            this.Risktxt.Size = new System.Drawing.Size(301, 22);
+            this.Risktxt.Size = new System.Drawing.Size(312, 22);
             this.Risktxt.TabIndex = 5;
+            this.Risktxt.TabStop = false;
             this.Risktxt.Text = "How much risk do you want to take on?";
             // 
             // Goaltxt
@@ -116,8 +107,9 @@
             this.Goaltxt.Location = new System.Drawing.Point(47, 136);
             this.Goaltxt.Name = "Goaltxt";
             this.Goaltxt.ReadOnly = true;
-            this.Goaltxt.Size = new System.Drawing.Size(301, 22);
+            this.Goaltxt.Size = new System.Drawing.Size(312, 22);
             this.Goaltxt.TabIndex = 7;
+            this.Goaltxt.TabStop = false;
             this.Goaltxt.Text = "What is your investment goal?";
             // 
             // Incometxt
@@ -127,8 +119,9 @@
             this.Incometxt.Location = new System.Drawing.Point(47, 304);
             this.Incometxt.Name = "Incometxt";
             this.Incometxt.ReadOnly = true;
-            this.Incometxt.Size = new System.Drawing.Size(301, 22);
+            this.Incometxt.Size = new System.Drawing.Size(312, 22);
             this.Incometxt.TabIndex = 8;
+            this.Incometxt.TabStop = false;
             this.Incometxt.Text = "What is your investable income range?";
             // 
             // Cashflowtxt
@@ -138,8 +131,9 @@
             this.Cashflowtxt.Location = new System.Drawing.Point(47, 432);
             this.Cashflowtxt.Name = "Cashflowtxt";
             this.Cashflowtxt.ReadOnly = true;
-            this.Cashflowtxt.Size = new System.Drawing.Size(301, 22);
+            this.Cashflowtxt.Size = new System.Drawing.Size(312, 22);
             this.Cashflowtxt.TabIndex = 9;
+            this.Cashflowtxt.TabStop = false;
             this.Cashflowtxt.Text = "Is cashflow a priority?";
             // 
             // REtxt
@@ -149,8 +143,9 @@
             this.REtxt.Location = new System.Drawing.Point(47, 488);
             this.REtxt.Name = "REtxt";
             this.REtxt.ReadOnly = true;
-            this.REtxt.Size = new System.Drawing.Size(301, 22);
+            this.REtxt.Size = new System.Drawing.Size(312, 22);
             this.REtxt.TabIndex = 10;
+            this.REtxt.TabStop = false;
             this.REtxt.Text = "Would you invest in real estate?";
             // 
             // RealEstateDB
@@ -162,11 +157,13 @@
             this.RealEstateDB.Items.AddRange(new object[] {
             "Yes",
             "No"});
-            this.RealEstateDB.Location = new System.Drawing.Point(382, 488);
+            this.RealEstateDB.Location = new System.Drawing.Point(396, 488);
             this.RealEstateDB.Name = "RealEstateDB";
-            this.RealEstateDB.Size = new System.Drawing.Size(159, 24);
+            this.RealEstateDB.Size = new System.Drawing.Size(145, 24);
             this.RealEstateDB.TabIndex = 19;
+            this.RealEstateDB.TabStop = false;
             this.RealEstateDB.Text = "- Select -";
+            this.RealEstateDB.SelectedIndexChanged += new System.EventHandler(this.RealEstateDB_SelectedIndexChanged);
             // 
             // CashflowDB
             // 
@@ -177,11 +174,13 @@
             this.CashflowDB.Items.AddRange(new object[] {
             "Yes",
             "No"});
-            this.CashflowDB.Location = new System.Drawing.Point(382, 430);
+            this.CashflowDB.Location = new System.Drawing.Point(396, 430);
             this.CashflowDB.Name = "CashflowDB";
-            this.CashflowDB.Size = new System.Drawing.Size(159, 24);
+            this.CashflowDB.Size = new System.Drawing.Size(145, 24);
             this.CashflowDB.TabIndex = 20;
+            this.CashflowDB.TabStop = false;
             this.CashflowDB.Text = "- Select -";
+            this.CashflowDB.SelectedIndexChanged += new System.EventHandler(this.CashflowDB_SelectedIndexChanged);
             // 
             // GoalsDB
             // 
@@ -194,10 +193,11 @@
             "Dividends",
             "Retirement",
             "Diversifying"});
-            this.GoalsDB.Location = new System.Drawing.Point(382, 134);
+            this.GoalsDB.Location = new System.Drawing.Point(396, 134);
             this.GoalsDB.Name = "GoalsDB";
-            this.GoalsDB.Size = new System.Drawing.Size(159, 24);
+            this.GoalsDB.Size = new System.Drawing.Size(145, 24);
             this.GoalsDB.TabIndex = 22;
+            this.GoalsDB.TabStop = false;
             this.GoalsDB.Text = "- Select -";
             this.GoalsDB.SelectedIndexChanged += new System.EventHandler(this.GoalsDB_SelectedIndexChanged);
             // 
@@ -211,11 +211,13 @@
             "<5 Years",
             "5 - 15 Years",
             "15+ Years"});
-            this.TimelineDB.Location = new System.Drawing.Point(382, 192);
+            this.TimelineDB.Location = new System.Drawing.Point(396, 192);
             this.TimelineDB.Name = "TimelineDB";
-            this.TimelineDB.Size = new System.Drawing.Size(159, 24);
+            this.TimelineDB.Size = new System.Drawing.Size(145, 24);
             this.TimelineDB.TabIndex = 21;
+            this.TimelineDB.TabStop = false;
             this.TimelineDB.Text = "- Select -";
+            this.TimelineDB.SelectedIndexChanged += new System.EventHandler(this.TimelineDB_SelectedIndexChanged);
             // 
             // RiskDB
             // 
@@ -227,11 +229,13 @@
             "Low Risk Tolerance",
             "Moderate Risk Tolerance",
             "High Risk Tolerance"});
-            this.RiskDB.Location = new System.Drawing.Point(382, 246);
+            this.RiskDB.Location = new System.Drawing.Point(396, 246);
             this.RiskDB.Name = "RiskDB";
-            this.RiskDB.Size = new System.Drawing.Size(159, 24);
+            this.RiskDB.Size = new System.Drawing.Size(145, 24);
             this.RiskDB.TabIndex = 24;
+            this.RiskDB.TabStop = false;
             this.RiskDB.Text = "- Select -";
+            this.RiskDB.SelectedIndexChanged += new System.EventHandler(this.RiskDB_SelectedIndexChanged);
             // 
             // IncomeDB
             // 
@@ -244,11 +248,13 @@
             "Low",
             "Moderate",
             "High"});
-            this.IncomeDB.Location = new System.Drawing.Point(382, 304);
+            this.IncomeDB.Location = new System.Drawing.Point(396, 304);
             this.IncomeDB.Name = "IncomeDB";
-            this.IncomeDB.Size = new System.Drawing.Size(159, 24);
+            this.IncomeDB.Size = new System.Drawing.Size(145, 24);
             this.IncomeDB.TabIndex = 23;
+            this.IncomeDB.TabStop = false;
             this.IncomeDB.Text = "- Select -";
+            this.IncomeDB.SelectedIndexChanged += new System.EventHandler(this.IncomeDB_SelectedIndexChanged);
             // 
             // SpendingHabitsDB
             // 
@@ -259,11 +265,13 @@
             this.SpendingHabitsDB.Items.AddRange(new object[] {
             "I can control myself",
             "I have a problem..."});
-            this.SpendingHabitsDB.Location = new System.Drawing.Point(382, 360);
+            this.SpendingHabitsDB.Location = new System.Drawing.Point(396, 360);
             this.SpendingHabitsDB.Name = "SpendingHabitsDB";
-            this.SpendingHabitsDB.Size = new System.Drawing.Size(159, 24);
+            this.SpendingHabitsDB.Size = new System.Drawing.Size(145, 24);
             this.SpendingHabitsDB.TabIndex = 25;
+            this.SpendingHabitsDB.TabStop = false;
             this.SpendingHabitsDB.Text = "- Select -";
+            this.SpendingHabitsDB.SelectedIndexChanged += new System.EventHandler(this.SpendingHabitsDB_SelectedIndexChanged);
             // 
             // SaveContinueBtn
             // 
@@ -275,6 +283,21 @@
             this.SaveContinueBtn.Text = "Save and Continue";
             this.SaveContinueBtn.UseVisualStyleBackColor = false;
             this.SaveContinueBtn.Click += new System.EventHandler(this.SaveContinueBtn_Click);
+            // 
+            // TitleRisktxt
+            // 
+            this.TitleRisktxt.BackColor = System.Drawing.SystemColors.WindowText;
+            this.TitleRisktxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TitleRisktxt.ForeColor = System.Drawing.SystemColors.Window;
+            this.TitleRisktxt.Location = new System.Drawing.Point(166, 12);
+            this.TitleRisktxt.Name = "TitleRisktxt";
+            this.TitleRisktxt.ReadOnly = true;
+            this.TitleRisktxt.Size = new System.Drawing.Size(267, 30);
+            this.TitleRisktxt.TabIndex = 0;
+            this.TitleRisktxt.TabStop = false;
+            this.TitleRisktxt.Text = "Risk Assessment";
+            this.TitleRisktxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.TitleRisktxt.TextChanged += new System.EventHandler(this.TitleRisktxt_TextChanged);
             // 
             // RiskQuizForm
             // 
@@ -311,8 +334,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox TitleRisktxt;
         private System.Windows.Forms.TextBox WelcomeInfoRisktxt;
         private System.Windows.Forms.TextBox Timelinetxt;
         private System.Windows.Forms.TextBox SHtxt;
@@ -329,5 +350,6 @@
         private System.Windows.Forms.ComboBox IncomeDB;
         private System.Windows.Forms.ComboBox SpendingHabitsDB;
         private System.Windows.Forms.Button SaveContinueBtn;
+        private System.Windows.Forms.TextBox TitleRisktxt;
     }
 }

@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Database.cs" />
     <Compile Include="FinancialAdivsor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,7 +69,9 @@
       <DependentUpon>RiskQuizForm.cs</DependentUpon>
     </Compile>
     <Compile Include="RiskTolerance.cs" />
-    <Compile Include="Investments.cs" />
+    <Compile Include="RiskyInvestments.cs" />
+    <Compile Include="StableInvestments.cs" />
+    <Compile Include="subRiskyInvestments.cs" />
     <Compile Include="User.cs" />
     <Compile Include="UserForm.cs">
       <SubType>Form</SubType>
