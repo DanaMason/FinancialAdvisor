@@ -1,9 +1,0 @@
-C:\Users\gamin\FinancialAdvisor\FinancialAdvisor\FinancialAdvisor\obj\Debug\FinancialAdvisor.csproj.AssemblyReference.cache
-C:\Users\gamin\FinancialAdvisor\FinancialAdvisor\FinancialAdvisor\obj\Debug\FinancialAdvisor.csproj.GenerateResource.cache
-C:\Users\gamin\FinancialAdvisor\FinancialAdvisor\FinancialAdvisor\obj\Debug\FinancialAdvisor.csproj.CoreCompileInputs.cache
-C:\Users\gamin\FinancialAdvisor\FinancialAdvisor\FinancialAdvisor\bin\Debug\FinancialAdvisor.dll
-C:\Users\gamin\FinancialAdvisor\FinancialAdvisor\FinancialAdvisor\bin\Debug\FinancialAdvisor.pdb
-C:\Users\gamin\FinancialAdvisor\FinancialAdvisor\FinancialAdvisor\obj\Debug\FinancialAdvisor.dll
-C:\Users\gamin\FinancialAdvisor\FinancialAdvisor\FinancialAdvisor\obj\Debug\FinancialAdvisor.pdb
-C:\Users\gamin\FinancialAdvisor\FinancialAdvisor\FinancialAdvisor\obj\Debug\FinancialAdvisor.FinancialAid.resources
-C:\Users\gamin\FinancialAdvisor\FinancialAdvisor\FinancialAdvisor\obj\Debug\FinancialAdvisor.RiskQuiz.resources
