@@ -9,7 +9,7 @@ namespace FinancialAdvisor
 {
     public class RiskTolerance : User
     {
-        public struct RiskToleranceData
+        public struct RiskToleranceData     // Important struct to carry the risk quiz data.
         {
             public string Goal;
             public string Timeline;
@@ -27,6 +27,9 @@ namespace FinancialAdvisor
         private string _spendingHabits;
         private string _cashflow;
         private string _realEstate;
+
+        // The preceeding vars are representing a variable in the struct.
+        // The following methods represent getter/setters for the vars.
 
         public string Goal
         {
@@ -112,7 +115,9 @@ namespace FinancialAdvisor
             }
         }
 
-        public RiskToleranceData GetRiskToleranceData()
+        // The following method passes the retrieved information into the info struct and returns it out.
+
+        public RiskToleranceData GetRiskToleranceData() 
         {
             RiskToleranceData info = new RiskToleranceData
 

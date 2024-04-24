@@ -23,7 +23,7 @@ namespace FinancialAid
             callCalc();
         }
 
-        public void callCalc()
+        public void callCalc()  // Determines how to calculate everything, and calls the calc method.
         {
             if (_riskData.RealEstate == "No")
             {
@@ -38,6 +38,8 @@ namespace FinancialAid
                 _realEstatePercent = CalculateInvestmentPercent(10, "Real Estate"); 
             }
         }
+
+        // The following three methods override the virtual methods in Portfolio.
 
         public override double getStockPercent()
         {
@@ -54,7 +56,7 @@ namespace FinancialAid
             return _realEstatePercent;
         }
 
-        private double CalculateInvestmentPercent(double initialValue, string category)
+        private double CalculateInvestmentPercent(double initialValue, string category) // Calcs the percentages for each thing passed in.
         {
             var adjustments = _database.GetCategoryAdjustments(category);
             double temp = initialValue;

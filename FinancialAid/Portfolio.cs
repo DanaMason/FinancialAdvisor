@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace FinancialAid
 {
-    public class Portfolio : User
+    public abstract class Portfolio : User       // Gives several virtual methods to later override.
     {
 
         public virtual double getStableInvestmentPercent()
@@ -32,10 +32,7 @@ namespace FinancialAid
             return 25.0;
         }
 
-        public virtual double getRealEstatePercent()
-        {
-            return 0.0;
-        }
+        public abstract double getRealEstatePercent();
 
         public Portfolio()
         {

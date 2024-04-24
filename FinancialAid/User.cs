@@ -14,7 +14,7 @@ namespace FinancialAid
         private string _name;
         private double _cashToInvest;
 
-        public string Name
+        public string Name      // For the name var.
         {
             get
             {
@@ -26,14 +26,16 @@ namespace FinancialAid
             }
         }
 
-        public double getCash()
+        public double Cash      // For the cash to invest
         {
-            return _cashToInvest;
-        }
-
-        public void setCash(double current_cash)
-        {
-            _cashToInvest = current_cash;
+            get
+            {
+                return _cashToInvest;
+            }
+            set
+            {
+                _cashToInvest = value;
+            }
         }
 
         public User()

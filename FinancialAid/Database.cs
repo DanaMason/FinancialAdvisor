@@ -11,13 +11,19 @@ namespace FinancialAid
         private Dictionary<string, Dictionary<string, int>> _adjustments;
         private Dictionary<string, Dictionary<string, int>> _adjustmentsRE;
         private string _realEstate = null;
+        
+        // Declares vars. including 2 Dictionary vars with Dictionaries inside of them.
+        // We use this to have a dictionary of selectioms that we reference, with dictionaries of 
+        // References in each reference.
+
         public Database(string RE)
         {
             _realEstate = RE;
             Adjustments();
             AdjustmentsRE();
         }
-        public Dictionary<string, int> GetCategoryAdjustments(string category)
+        
+        public Dictionary<string, int> GetCategoryAdjustments(string category)  // Determines if RE is enabled, then sends it to corresponding dictionary.
         {
             if (_realEstate == "No")
             {
@@ -26,6 +32,7 @@ namespace FinancialAid
                     return _adjustments[category];
                 }
             }
+
             else if (_realEstate == "Yes")
             {
                 if (_adjustmentsRE.ContainsKey(category))
@@ -33,17 +40,23 @@ namespace FinancialAid
                     return _adjustmentsRE[category];
                 }
             }
+
             return null;
+
         }
 
         private void Adjustments()
         {
             _adjustments = new Dictionary<string, Dictionary<string, int>>
+
+            // This is for without real estate
+
             {
-                {"StableInvestments", new Dictionary<string, int>
+                {
+                    "StableInvestments", new Dictionary<string, int>    // For example, this is in the first dictionary, with just four entries.
                     {
-                        {"Growth/Value", -15},
-                        {"Dividends", 5},
+                        {"Growth/Value", -15},      // Also for example, this is in the second dictionary, 
+                        {"Dividends", 5},               // as the first entry. With "Growth/Value", and -15 as values.
                         {"Retirement", 0},
                         {"Diversifying", 0},
                         {"<5 Years", 10},
@@ -59,7 +72,8 @@ namespace FinancialAid
                     }
                 },
 
-                {"RiskyInvestments", new Dictionary<string, int>
+                {
+                    "RiskyInvestments", new Dictionary<string, int>
                     {
                         {"Growth/Value", 15},
                         {"Dividends", -5},
@@ -78,7 +92,8 @@ namespace FinancialAid
                     }
                 },
 
-                {"Stocks", new Dictionary<string, int>
+                {
+                    "Stocks", new Dictionary<string, int>
                     {
                         {"Growth/Value", 10},
                         {"Dividends", -8},
@@ -97,7 +112,8 @@ namespace FinancialAid
                     }
                 },
 
-                {"ETFs", new Dictionary<string, int>
+                {
+                    "ETFs", new Dictionary<string, int>
                     {
                         {"Growth/Value", 5},
                         {"Dividends", 3},
@@ -121,8 +137,12 @@ namespace FinancialAid
             private void AdjustmentsRE()
             {
                 _adjustmentsRE = new Dictionary<string, Dictionary<string, int>>
+
+                // the dictionary for including real estate investments.
+
                 {
-                    {"StableInvestments", new Dictionary<string, int>
+                    {
+                        "StableInvestments", new Dictionary<string, int>
                         {
                             {"Growth/Value", -16},
                             {"Dividends", 5},
@@ -145,7 +165,8 @@ namespace FinancialAid
                             {"Real Estate", 0}
                         }
                     },
-                    {"RiskyInvestments", new Dictionary<string, int>
+                    {
+                        "RiskyInvestments", new Dictionary<string, int>
                         {
                             {"Growth/Value", 16},
                             {"Dividends", -5},
@@ -168,7 +189,8 @@ namespace FinancialAid
                             {"Real Estate", 0} 
                         }
                     },
-                    {"Stocks", new Dictionary<string, int>
+                    {
+                        "Stocks", new Dictionary<string, int>
                         {
                             {"Growth/Value", 7},
                             {"Dividends", -5},
@@ -191,7 +213,8 @@ namespace FinancialAid
                             {"Real Estate", 0} 
                         }
                     },
-                    {"ETFs", new Dictionary<string, int>
+                    {
+                        "ETFs", new Dictionary<string, int>
                         {
                             {"Growth/Value", 5},
                             {"Dividends", -8},
@@ -214,7 +237,8 @@ namespace FinancialAid
                             {"Real Estate", 0} 
                         }
                     },
-                    {"Real Estate", new Dictionary<string, int>
+                    {
+                        "Real Estate", new Dictionary<string, int>
                         {
                             {"Growth/Value", 4},
                             {"Dividends", 8},

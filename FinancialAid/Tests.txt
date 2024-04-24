@@ -1,0 +1,17 @@
+Test									Outcome					Following decision
+
+
+UserForm Cont. button without			Error was caused		Exception was created		//MessageBox.Show($"Name: {user.Name}, Total Cash: {user.getCash()}", 
+the Name, Cash or invalid cash.																"User Information", MessageBoxButtons.OK, MessageBoxIcon.Information); was used.
+
+Checked if you can hit the				Error was thrown		Exception was created 
+Portfolio calc. button
+withoput taking quiz
+
+Checked if all Risk Quiz items			Would continue with		Exception was created
+were selected on something.				null input	
+
+Checked to see if all the riskData		Used the following		Fixed the errors I was having		I don't have the code exactly but I displayed the 
+																									contents of info with newlines in between each instance 
+																									and used this to display everything.
+

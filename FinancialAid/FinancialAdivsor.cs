@@ -12,15 +12,13 @@ using static FinancialAdvisor.RiskTolerance;
 
 namespace FinancialAid
 {
-    //MessageBox.Show($"Name: {user.Name}, Total Cash: {user.getCash()}", "User Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
     public partial class FinancialAdvisor : Form
     {
         private User user;
         RiskTolerance riskTolerance = new RiskTolerance();
         private bool riskQuizTaken = false;
 
-        private RiskTolerance.RiskToleranceData _riskTolerance = new RiskTolerance.RiskToleranceData
+        private RiskTolerance.RiskToleranceData _riskTolerance = new RiskTolerance.RiskToleranceData    // creates instance of the struct.
         {
             Goal = null,
             Timeline = null,
@@ -36,15 +34,18 @@ namespace FinancialAid
             InitializeComponent();
             this.user = user;
             Welcometxt.Text = user.Name + ", welcome to FinancialAid.io! Please follow the instructions that follow.";
+
+            // These display the new name with a message.
+
         }
 
-        private void RiskQuizButton_Click(object sender, EventArgs e)
+        private void RiskQuizButton_Click(object sender, EventArgs e)   // Displays the risk quiz.
         {
             RiskQuizForm riskQuizForm = new RiskQuizForm(riskTolerance, this);
             riskQuizForm.Show();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)  // Button to calc portfolio. Displays error when applicable.
         {
             if (riskQuizTaken == false)
             {
@@ -52,7 +53,7 @@ namespace FinancialAid
                 return;
             }
 
-            double cashToInvest = user.getCash(); 
+            double cashToInvest = user.Cash; 
             PortfolioForm portfolioForm = new PortfolioForm(cashToInvest, _riskTolerance);
             portfolioForm.Show();
         }
@@ -77,11 +78,11 @@ namespace FinancialAid
 
         }
 
-        private void FinancialAdivsor_Load(object sender, EventArgs e)
+        private void FinancialAdivsor_Load(object sender, EventArgs e)  // Further error handling efforts here.
         {
             Welcometxt.Text = user.Name + ", welcome to FinancialAid.io! Please follow the instructions that follow.";
         }
-        public void recieveandanalyzeRisk(RiskTolerance.RiskToleranceData info)
+        public void recieveandanalyzeRisk(RiskTolerance.RiskToleranceData info) // Sets the retreived info struct to the values to pass on and lets the form know the quiz was taken.
         {
             _riskTolerance.Goal = info.Goal;
             _riskTolerance.Timeline = info.Timeline;
@@ -94,7 +95,7 @@ namespace FinancialAid
             riskQuizTaken = true;
         }
 
-        private void Restart_Click(object sender, EventArgs e)
+        private void Restart_Click(object sender, EventArgs e)  // Restarts the app.
         {
             this.Hide();
 
@@ -104,7 +105,7 @@ namespace FinancialAid
             userForm.ShowDialog();
         }
 
-        private void Exit_Click(object sender, EventArgs e)
+        private void Exit_Click(object sender, EventArgs e)     // Exits application.
         {
             this.Close();
         }

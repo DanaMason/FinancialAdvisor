@@ -8,9 +8,9 @@ namespace FinancialAid
 {
     internal static class Program
     {
-        /// <summary>
-        /// The main entry point for the application.
-        /// </summary>
+        
+        // Main function, simply declares a new User superclass and creates an instance of the User Form.
+
         [STAThread]
         static void Main(string[] args)
         {

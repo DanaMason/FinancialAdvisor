@@ -14,13 +14,18 @@ namespace FinancialAid
         private RiskTolerance.RiskToleranceData _riskData;
         private Database _database;
 
+        // This instantiates vars and creates a riskData struct and database instances.
+
         public RiskyInvestments(RiskTolerance.RiskToleranceData riskData, Database database)
         {
             this._riskData = riskData;
             this._database = database;
             _riskierInvestmentsPercent = CalculateInvestmentPercent(50);
+            
+            // This calcs the investment percent with a starting amount of 50.
+
         }
-        private double CalculateInvestmentPercent(double initialValue)
+        private double CalculateInvestmentPercent(double initialValue)  // Calcs percent for this investment type.
         {
             var adjustments = _database.GetCategoryAdjustments("RiskyInvestments");
             double temp = initialValue;
@@ -34,9 +39,15 @@ namespace FinancialAid
             return Math.Max(0, Math.Min(100, temp));
         }
 
-        public override double getRiskierInvestmentsPercent()
+        public override double getRiskierInvestmentsPercent()   
         {
             return _riskierInvestmentsPercent;
         }
+
+        public override double getRealEstatePercent()
+        {
+            return 0;
+        }
+
     }
 }

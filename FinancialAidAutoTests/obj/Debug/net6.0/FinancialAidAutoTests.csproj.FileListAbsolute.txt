@@ -1,0 +1,6 @@
+C:\Users\gamin\FinancialAdvisor\FinancialAidAutoTests\obj\Debug\net6.0\FinancialAidAutoTests.csproj.AssemblyReference.cache
+C:\Users\gamin\FinancialAdvisor\FinancialAidAutoTests\obj\Debug\net6.0\FinancialAidAutoTests.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gamin\FinancialAdvisor\FinancialAidAutoTests\obj\Debug\net6.0\FinancialAidAutoTests.AssemblyInfoInputs.cache
+C:\Users\gamin\FinancialAdvisor\FinancialAidAutoTests\obj\Debug\net6.0\FinancialAidAutoTests.AssemblyInfo.cs
+C:\Users\gamin\FinancialAdvisor\FinancialAidAutoTests\obj\Debug\net6.0\FinancialAidAutoTests.csproj.CoreCompileInputs.cache
+C:\Users\gamin\FinancialAdvisor\FinancialAidAutoTests\obj\Debug\net6.0\FinancialAidAutoTests.csproj.ResolveComReference.cache

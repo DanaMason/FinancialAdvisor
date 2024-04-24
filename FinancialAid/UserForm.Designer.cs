@@ -157,6 +157,7 @@
             this.MinimumSize = new System.Drawing.Size(492, 537);
             this.Name = "UserForm";
             this.Text = "UserForm";
+            this.Load += new System.EventHandler(this.UserForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

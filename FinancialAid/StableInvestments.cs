@@ -22,7 +22,7 @@ namespace FinancialAid
             _stableInvestmentPercent = CalculateInvestmentPercent(50);
         }
 
-        private double CalculateInvestmentPercent(double initialValue)
+        private double CalculateInvestmentPercent(double initialValue)  // Calcs the percentage.
         {
            var adjustments = _database.GetCategoryAdjustments("StableInvestments");
             double temp = initialValue;
@@ -40,5 +40,11 @@ namespace FinancialAid
         {
             return _stableInvestmentPercent;
         }
+
+        public override double getRealEstatePercent()
+        {
+            return 0;
+        }
+
     }
 }

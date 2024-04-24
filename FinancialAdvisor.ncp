@@ -13,8 +13,7 @@
         <Member type="Field">private string _name</Member>
         <Member type="Field">private double _cashToInvest</Member>
         <Member type="Property">public string Name { get; set; }</Member>
-        <Member type="Method">public double getCash()</Member>
-        <Member type="Method">public void setCash(double current_cash)</Member>
+        <Member type="Property">public int Cash { get; set; }</Member>
         <Member type="Constructor">public User()</Member>
         <Modifier>None</Modifier>
       </Entity>
@@ -39,7 +38,6 @@
         <Member type="Property">public string SpendingHabits { get; set; }</Member>
         <Member type="Property">public Boolean Cashflow { get; set; }</Member>
         <Member type="Property">public Boolean RealEstate { get; set; }</Member>
-        <Member type="Method">public RiskToleranceData GetRiskToleranceData()</Member>
         <Member type="Constructor">public RiskTolerance()</Member>
         <Modifier>None</Modifier>
       </Entity>
@@ -53,9 +51,9 @@
         <Member type="Method">public virtual double getRiskierInvestmentsPercent()</Member>
         <Member type="Method">public virtual double getStockPercent()</Member>
         <Member type="Method">public virtual double getETFPercent()</Member>
-        <Member type="Method">public virtual double getRealEstatePercent()</Member>
+        <Member type="Method">public abstract double getRealEstatePercent()</Member>
         <Member type="Constructor">public Portfolio()</Member>
-        <Modifier>None</Modifier>
+        <Modifier>Abstract</Modifier>
       </Entity>
       <Entity type="Class">
         <Name>StableInvestments</Name>
@@ -68,13 +66,14 @@
         <Member type="Field">private RiskTolerance.RiskToleranceData _riskData</Member>
         <Member type="Method">public override double getStableInvestmentPercent()</Member>
         <Member type="Method">private double CalculateInvestmentPercent(double initialValue)</Member>
+        <Member type="Method">public override double getRealEstatePercent()</Member>
         <Member type="Constructor">public StableInvestments(RiskTolerance.RiskToleranceData riskData, int database)</Member>
         <Modifier>None</Modifier>
       </Entity>
       <Entity type="Class">
         <Name>RiskierInvestments</Name>
         <Access>Public</Access>
-        <Location left="294" top="766" />
+        <Location left="294" top="784" />
         <Size width="162" height="247" />
         <Collapsed>False</Collapsed>
         <Member type="Field">private double _riskierInvestmentTotal</Member>
@@ -82,6 +81,7 @@
         <Member type="Field">private RiskTolerance.RiskToleranceData _riskData</Member>
         <Member type="Method">public override double getRiskierInvestmentsPercent()</Member>
         <Member type="Method">private double CalculateInvestmentPercent(double initialValue)</Member>
+        <Member type="Method">public override double getRealEstatePercent()</Member>
         <Member type="Constructor">public RiskierInvestments(RiskTolerance.RiskToleranceData riskData, Database database)</Member>
         <Modifier>None</Modifier>
       </Entity>
@@ -155,20 +155,16 @@
         </BendPoint>
         <BendPoint relativeToStartShape="False">
           <X>374</X>
-          <Y>1038</Y>
+          <Y>1056</Y>
         </BendPoint>
       </Relationship>
       <Relationship type="Association" first="5" second="3">
-        <Label>
-        </Label>
         <StartOrientation>Horizontal</StartOrientation>
         <EndOrientation>Horizontal</EndOrientation>
         <Direction>Unidirectional</Direction>
         <AssociationType>Association</AssociationType>
       </Relationship>
       <Relationship type="Association" first="5" second="6">
-        <Label>
-        </Label>
         <StartOrientation>Vertical</StartOrientation>
         <EndOrientation>Horizontal</EndOrientation>
         <BendPoint relativeToStartShape="False">
@@ -179,8 +175,6 @@
         <AssociationType>Association</AssociationType>
       </Relationship>
       <Relationship type="Association" first="5" second="4">
-        <Label>
-        </Label>
         <StartOrientation>Horizontal</StartOrientation>
         <EndOrientation>Horizontal</EndOrientation>
         <Direction>Unidirectional</Direction>
