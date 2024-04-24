@@ -35,7 +35,7 @@ namespace FinancialAid
         {
             InitializeComponent();
             this.user = user;
-            WelcomeBox.Text = "Welcome " + user.Name + ", welcome to FinancialAid.io! Please follow the instructions that follow.";
+            textBox3.Text = user.Name + ", welcome to FinancialAid.io! Please follow the instructions that follow.";
         }
 
         private void RiskQuizButton_Click(object sender, EventArgs e)
@@ -79,7 +79,7 @@ namespace FinancialAid
 
         private void FinancialAdivsor_Load(object sender, EventArgs e)
         {
-
+            textBox3.Text = user.Name + ", welcome to FinancialAid.io! Please follow the instructions that follow.";
         }
         public void recieveandanalyzeRisk(RiskTolerance.RiskToleranceData info)
         {
