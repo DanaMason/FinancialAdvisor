@@ -8,29 +8,29 @@ namespace FinancialAid
 {
     public class Database
     {
-        private Dictionary<string, Dictionary<string, int>> adjustments;
-        private Dictionary<string, Dictionary<string, int>> adjustmentsRE;
-        private string realEstate = null;
+        private Dictionary<string, Dictionary<string, int>> _adjustments;
+        private Dictionary<string, Dictionary<string, int>> _adjustmentsRE;
+        private string _realEstate = null;
         public Database(string RE)
         {
-            realEstate = RE;
+            _realEstate = RE;
             Adjustments();
             AdjustmentsRE();
         }
         public Dictionary<string, int> GetCategoryAdjustments(string category)
         {
-            if (realEstate == "No")
+            if (_realEstate == "No")
             {
-                if (adjustments.ContainsKey(category))
+                if (_adjustments.ContainsKey(category))
                 {
-                    return adjustments[category];
+                    return _adjustments[category];
                 }
             }
-            else if (realEstate == "Yes")
+            else if (_realEstate == "Yes")
             {
-                if (adjustmentsRE.ContainsKey(category))
+                if (_adjustmentsRE.ContainsKey(category))
                 {
-                    return adjustmentsRE[category];
+                    return _adjustmentsRE[category];
                 }
             }
             return null;
@@ -38,7 +38,7 @@ namespace FinancialAid
 
         private void Adjustments()
         {
-            adjustments = new Dictionary<string, Dictionary<string, int>>
+            _adjustments = new Dictionary<string, Dictionary<string, int>>
             {
                 {"StableInvestments", new Dictionary<string, int>
                     {
@@ -117,9 +117,10 @@ namespace FinancialAid
                 }
             };
         }
+
             private void AdjustmentsRE()
             {
-                adjustmentsRE = new Dictionary<string, Dictionary<string, int>>
+                _adjustmentsRE = new Dictionary<string, Dictionary<string, int>>
                 {
                     {"StableInvestments", new Dictionary<string, int>
                         {

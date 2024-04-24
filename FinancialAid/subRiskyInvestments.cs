@@ -13,25 +13,25 @@ namespace FinancialAid
         private double _stocksPercent;
         private double _realEstatePercent;
         private double _etfPercent;
-        private RiskTolerance.RiskToleranceData riskData;
-        private Database database;
+        private RiskTolerance.RiskToleranceData _riskData;
+        private Database _database;
 
         public subRiskyInvestments(RiskTolerance.RiskToleranceData riskData, Database database)
         {
-            this.riskData = riskData;
-            this.database = database;
+            this._riskData = riskData;
+            this._database = database;
             callCalc();
         }
 
         public void callCalc()
         {
-            if (riskData.RealEstate == "No")
+            if (_riskData.RealEstate == "No")
             {
                 _stocksPercent = CalculateInvestmentPercent(25, "Stocks");
                 _etfPercent = CalculateInvestmentPercent(25, "ETFs");     
                 _realEstatePercent = 0;                                   
             }
-            else if (riskData.RealEstate == "Yes")
+            else if (_riskData.RealEstate == "Yes")
             {
                 _stocksPercent = CalculateInvestmentPercent(20, "Stocks"); 
                 _etfPercent = CalculateInvestmentPercent(20, "ETFs");     
@@ -56,14 +56,14 @@ namespace FinancialAid
 
         private double CalculateInvestmentPercent(double initialValue, string category)
         {
-            var adjustments = database.GetCategoryAdjustments(category);
+            var adjustments = _database.GetCategoryAdjustments(category);
             double temp = initialValue;
 
-            temp += adjustments[riskData.Goal];
-            temp += adjustments[riskData.Timeline];
-            temp += adjustments[riskData.IntendedRisk];
-            temp += adjustments[riskData.SpendingHabits];
-            temp += adjustments[riskData.Cashflow];
+            temp += adjustments[_riskData.Goal];
+            temp += adjustments[_riskData.Timeline];
+            temp += adjustments[_riskData.IntendedRisk];
+            temp += adjustments[_riskData.SpendingHabits];
+            temp += adjustments[_riskData.Cashflow];
 
             return Math.Max(0, Math.Min(100, temp));
         }
