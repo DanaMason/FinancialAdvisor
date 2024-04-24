@@ -194,11 +194,12 @@
             this.Welcometxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Welcometxt.Font = new System.Drawing.Font("Mongolian Baiti", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Welcometxt.ForeColor = System.Drawing.Color.White;
-            this.Welcometxt.Location = new System.Drawing.Point(100, 12);
+            this.Welcometxt.Location = new System.Drawing.Point(87, 12);
             this.Welcometxt.Multiline = true;
             this.Welcometxt.Name = "Welcometxt";
             this.Welcometxt.Size = new System.Drawing.Size(346, 135);
             this.Welcometxt.TabIndex = 11;
+            this.Welcometxt.Text = "welcome box";
             this.Welcometxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Welcometxt.TextChanged += new System.EventHandler(this.WelcomeBox_TextChanged);
             // 
